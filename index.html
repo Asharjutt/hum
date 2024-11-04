@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Animated Responsive Navbar</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt=""></div>
+        
+        <!-- Navigation Links -->
+        <div class="nav-links" id="nav-links">
+            <!-- Close Icon in Navbar -->
+            <div class="close-icon" id="close-icon">
+                <i class='bx bx-x'></i>
+            </div>
+            <a href="#contactus"><i class='bx bx-envelope'></i> Contact Us</a>
+            <a href="#products"><i class='bx bx-cart'></i> Products</a>
+            <a href="#blog"><i class='bx bx-book'></i> Blog</a>
+            <a href="#aboutus"><i class='bx bx-info-circle'></i> About Us</a>
+            <i class='bx bx-x'></i>
+        </div>
+        
+        <!-- Add to Cart Icon -->
+        <div class="cart-icon">
+            <i class='bx bx-shopping-bag'></i>
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<!--hero section-->
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Website</h1>
+            <p>Your journey to amazing experiences begins here. Discover more with us today!</p>
+            <button class="hero-button">Explore Now</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+<!--section of card after hero -->
+<div class="card-container">
+    <div class="card">
+        <img src="f2.png" alt="Product 1">
+        <div class="card-content">
+        </div>
+    </div>
+    
+        <div class="card">
+        <img src="f1.png" alt="Product 4">
+    </div>
+        <div class="card">
+        <img src="f3.png" alt="Product 4">
+    </div>
+        <div class="card">
+        <img src="f4.png" alt="Product 4">
+    </div>
+      
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 style="text-align: center; margin-top: 80px;">FEATURED PRODUCT</h1><br><br>
+
+<div class="card-container">
+    <div class="card">
+        <img src="f3.jpg" alt="Product 1">
+        <div class="card-content">
+            <h3>Product 1</h3>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart">
+                <i class="bx bx-cart"></i> 
+            </button>
+            <i class="bx bx-heart like-icon" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="f5.jpg" alt="Product 2">
+        <div class="card-content">
+            <h3>Product 2</h3>
+            <p class="price">$35.99</p>
+            <button class="add-to-cart">
+                <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart like-icon" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="f4.jpg" alt="Product 3">
+        <div class="card-content">
+            <h3>Product 3</h3>
+            <p class="price">$40.99</p>
+            <button class="add-to-cart">
+                <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart like-icon" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="f2.jpg" alt="Product 4">
+        <div class="card-content">
+            <h3>Product 4</h3>
+            <p class="price">$24.99</p>
+            <button class="add-to-cart">
+                <i class="bx bx-cart"></i> 
+            </button>
+            <i class="bx bx-heart like-icon" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+</div><br><br><br><br><br><br><br><br>s
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner" style="margin-top: -150px;">
+    <div class="banner-content">
+        <h1>Welcome to Our Store</h1>
+        <h2>Discover the Best Products Here</h2>
+        <button class="banner-btn">Shop Now</button>
+    </div>
+</div><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+<div class="new-arrival-section" style="margin-top: -150px;">
+    <h1 class="new-arrival-heading">New Arrival</h1>
+    <p class="tagline">Discover the latest products just for you!</p>
+</div>
+
+
+
+<div class="card-container" style="margin-top: 80px;">
+    <div class="card">
+        <img src="f5.jpg" alt="Product 1">
+        <div class="card-content">
+            <h3>Product 1</h3>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart">
+                <i class="bx bx-cart"></i> 
+            </button>
+            <i class="bx bx-heart like-icon" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="f3.jpg" alt="Product 2">
+        <div class="card-content">
+            <h3>Product 2</h3>
+            <p class="price">$35.99</p>
+            <button class="add-to-cart">
+                <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart like-icon" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="f2.jpg" alt="Product 3">
+        <div class="card-content">
+            <h3>Product 3</h3>
+            <p class="price">$40.99</p>
+            <button class="add-to-cart">
+                <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart like-icon" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="f1.jpg" alt="Product 4">
+        <div class="card-content">
+            <h3>Product 4</h3>
+            <p class="price">$24.99</p>
+            <button class="add-to-cart">
+                <i class="bx bx-cart"></i> 
+            </button>
+            <i class="bx bx-heart like-icon" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="picture-container" style="margin-top: 80px;">
+    <div class="picture">
+        <img src="b10.jpg" alt="" style="width: 800px;"> <!-- Replace with your image path -->
+        <div class="overlay">
+            <h1>Picture One</h1>
+            <p>This is a description for the first picture.</p>
+            <button class="btn">Learn More</button>
+        </div>
+    </div>
+    <div class="picture"> 
+        <img src="b18.jpg" alt="" style="width: 800px;"><!-- Replace with your image path -->
+        <div class="overlay">
+            <h1>Picture Two</h1>
+            <p>This is a description for the second picture.</p>
+            <button class="btn">Learn More</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="picture-container1">
+    <div class="picture1" style="background-image: url('b17.jpg');"> <!-- Replace with your image path -->
+        <h1>Picture One</h1>
+    </div>
+    <div class="picture1" style="background-image: url('b16.jpg');"> <!-- Replace with your image path -->
+        <h1>Picture One</h1>
+    </div>
+    
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="email-section" style="height: 150px;">
+    <div class="content">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates straight to your inbox!</p>
+        <form>
+            <input type="email" id="email" class="email-input" placeholder="Enter your email" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Company Logo" class="logo"> <!-- Replace with your logo path -->
+            <h3 class="company-name">Your Company Name</h3>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+            <a href="#" class="social-icon"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

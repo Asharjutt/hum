@@ -1,0 +1,728 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+ 
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E3E6F3;
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-in-out;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+    animation-delay: 0.2s;
+}
+
+.nav-links a i {
+    margin-right: 5px;
+}
+
+/* Add to Cart Icon */
+.cart-icon {
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburger i {
+    font-size: 24px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: #E3E6F3;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+        z-index: 100;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    /* Slide-in Animation */
+    .nav-links.active {
+        right: 0;
+        animation: slideIn 0.4s ease-in-out;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Close Icon Styles */
+    .close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+    }
+}
+
+/* Keyframes */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hero section styling */
+.hero {
+    background-color: #E3E6F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    background-image: url('hero.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    color: #333;
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Hero Button Styling */
+.hero-button {
+    background-image: url(''); /* Replace with your button background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 22%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-content .price {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+   
+    color: #000000;
+    padding: 0.5rem 1rem;
+    align-items: end;
+    border: none;
+    cursor: pointer;
+    display: end;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #dcdbdb;
+}
+
+.like-icon {
+    font-size: 1.5rem;
+    color: #4f0000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.like-icon.liked {
+    color: #ff4d4d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner {
+    width: 100vw;
+   
+    height: 80vh;
+    background-image: url('b1.jpg'); /* Replace 'banner.jpg' with your background image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-content {
+   * Semi-transparent black overlay */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.banner h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.banner-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    
+    }
+
+    .banner h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner h2 {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.new-arrival-section {
+    text-align: center; /* Center text within the section */
+}
+
+.new-arrival-heading {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 10px; /* Space below the heading */
+    color: #333; /* Heading color */
+}
+
+.tagline {
+    font-size: 1.2rem; /* Tagline size */
+    color: #666; /* Tagline color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.picture-container {
+    display: flex;
+    justify-content: space-between; /* Space between the pictures */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 20px;
+}
+
+.picture {
+    position: relative;
+    width: 48%; /* Width for two pictures */
+    height: 300px; /* Fixed height for consistency */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f0f0f0; /* Change button color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .picture {
+        width: 100%; /* Full width on smaller screens */
+        height: 250px; /* Adjust height if needed */
+    }
+
+    .picture-container {
+        flex-direction: column; /* Stack pictures vertically */
+    }
+}
+
+.picture
+{
+    background-image: url(img\IMG_2060.JPG);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.picture-container1 {
+    display: flex;
+    justify-content: space-between; /* Space between the pictures */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 20px;
+}
+
+.picture1 {
+    position: relative;
+
+    width:600px; /* Width for three pictures */
+    height: 300px; /* Fixed height for consistency */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden; /* Prevent overflow of content */
+    /* Space around each picture */
+    color: white; /* Text color */
+    display: flex; /* Center the text vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .picture1 {
+        width: 48%; /* Two pictures per row on smaller screens */
+        height: 250px; /* Adjust height if needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .picture1 {
+        width: 48%; /* Full width on extra small screens */
+        height: 200px; /* Adjust height for extra small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.email-section {
+    display: flex; /* Use flexbox for alignment */
+    margin-top: 80px;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content horizontally */
+    background-color: #d3d9f2; /* Background color */
+    height: 200px; /* Fixed height */
+}
+
+.content {
+    text-align: center; /* Center text inside content */
+}
+
+h2 {
+    margin-bottom: 5px; /* Space below the heading */
+    font-size: 18px; /* Font size for heading */
+}
+
+p {
+    margin-bottom: 5px; /* Space below the paragraph */
+    font-size: 14px; /* Font size for paragraph */
+}
+
+.email-input {
+    padding: 5px; /* Padding for input */
+    border: 2px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border 0.3s ease; /* Animation for border */
+    margin-top: 5px; /* Space above the input */
+}
+
+.email-input::placeholder {
+    color: #aaa; /* Placeholder color */
+}
+
+.email-input:focus {
+    border-color: #5b0f02; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.subscribe-btn {
+    background-color: #5b0f02; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 5px; /* Space above the button */
+    transition: background 0.3s ease; /* Animation for background */
+}
+
+.subscribe-btn:hover {
+    background-color: #7f1d02; /* Darker shade on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .email-section {
+        height: 100px; /* Maintain height on smaller screens */
+    }
+
+    h2 {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    p {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .email-input {
+        width: 100%; /* Full width input */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .subscribe-btn {
+        width: 100%; /* Full width button on small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #becaf8; /* Background color for the footer */
+    color: rgb(0, 0, 0); /* Text color */
+    padding: 20px 0; /* Vertical padding */
+}
+
+.footer-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space out items */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the footer container */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-logo {
+    display: flex; /* Flex for logo and company name */
+    align-items: center; /* Center vertically */
+}
+
+.logo {
+    width: 50px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and name */
+}
+
+.company-name {
+    font-size: 20px; /* Company name font size */
+}
+
+.footer-links ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontal list */
+}
+
+.footer-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.footer-links a {
+    color: rgb(0, 0, 0); /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.footer-links a:hover {
+    color: #000000; /* Change color on hover */
+}
+
+.social-icons {
+    display: flex; /* Flexbox for social icons */
+}
+
+.social-icon {
+    color: rgb(255, 0, 0); /* Icon color */
+    margin-left: 15px; /* Space between icons */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-icon:hover {
+    color: #e3e6f3; /* Change icon color on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .footer-links ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links */
+        margin: 10px 0; /* Space above and below links */
+    }
+
+    .footer-links li {
+        margin: 5px 0; /* Space between links */
+    }
+}
